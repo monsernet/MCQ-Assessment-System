@@ -1,0 +1,64 @@
+######################################################
+# ASP.NET Core / Visual Studio / C# .gitignore
+######################################################
+
+# Build results
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code settings
+.vscode/
+
+# Visual Studio working folder
+.vs/
+
+# .NET Core artifacts
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Secrets and config
+secrets.json
+appsettings.*.json
+!appsettings.json
+
+# Publish
+wwwroot/dist/
+wwwroot/node_modules/
+publish/
+
+# npm / yarn / node
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# NuGet
+*.nupkg
+.nuget/
+
+# JetBrains Rider
+.idea/
+
+# Backup and temp files
+*.bak
+*.tmp
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db

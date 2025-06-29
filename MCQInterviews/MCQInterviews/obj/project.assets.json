@@ -14754,11 +14754,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\MCQInterviews\\V2.2\\MCQInterviews\\MCQInterviews\\MCQInterviews.csproj",
+      "projectUniqueName": "F:\\MCQInterviews\\MCQInterviews\\MCQInterviews\\MCQInterviews.csproj",
       "projectName": "MCQInterviews",
-      "projectPath": "F:\\MCQInterviews\\V2.2\\MCQInterviews\\MCQInterviews\\MCQInterviews.csproj",
+      "projectPath": "F:\\MCQInterviews\\MCQInterviews\\MCQInterviews\\MCQInterviews.csproj",
       "packagesPath": "C:\\Users\\Ali Monser\\.nuget\\packages\\",
-      "outputPath": "F:\\MCQInterviews\\V2.2\\MCQInterviews\\MCQInterviews\\obj\\",
+      "outputPath": "F:\\MCQInterviews\\MCQInterviews\\MCQInterviews\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
