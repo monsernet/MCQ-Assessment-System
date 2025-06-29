@@ -1,0 +1,70 @@
+﻿@model List<MCQInterviews.Models.Domain.QuestionDifficultyType>
+@{
+}
+
+<div class="container py-3">
+    @if (TempData["successMsg"] != null)
+    {
+        <div class="alert alert-success">
+            <i class="fas fa-check-circle"></i> 
+            @TempData["successMsg"]
+        </div>
+    }
+    <div class="card mt-2">
+        <div class="card-header">
+            <h5 class="text-primary text-primary text-center">List of Question Difficulty Types</h5>
+        </div>
+        <div class="card-body">
+            @if (Model != null && Model.Any())
+            {
+                <table class="table small" id="questionDiffTypesTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <td>Name</td>
+                            <td>Number of Points</td>
+                            <td width="15%">Action</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var diffType in Model)
+                        {
+                            <tr>
+                                <td class="counter"></td>
+                                <td>@diffType.TypeText</td>
+                                <td>@diffType.PointValue</td>
+                                <td>
+                                    <form asp-controller="QuestionDifficultyType" asp-action="Delete" asp-route-id="@diffType.Id" method="post">
+                                        <a asp-area=""
+                                           class="btn btn-sm btn-primary mr-2"
+                                           asp-controller="QuestionDifficultyType"
+                                           asp-action="Edit"
+                                           asp-route-id="@diffType.Id"> Edit</a>
+
+                                        <button type="submit" class="btn btn-sm btn-danger mr-2">Delete</button>
+                                    </form>
+                                </td>
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <p class="text-danger"><i class="fa fa-exclamation-tringle"></i> No Question Difficulty Types Found</p>
+                
+            }
+        </div>
+    </div>
+</div>
+
+<script>
+    window.onload = function () {
+        var counterCells = document.querySelectorAll('.counter');
+        for (var i = 0; i < counterCells.length; i++) {
+            counterCells[i].innerText = i + 1;
+        }
+    };
+</script>
+

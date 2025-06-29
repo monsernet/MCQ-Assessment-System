@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Upload Successful";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="alert alert-success" role="alert">
+    Your voice sample has been successfully uploaded. The admin will review it soon.
+</div>
+
+<a href="@Url.Action("UploadVoiceSample", "VoiceSample")" class="btn btn-primary">Upload Another Voice Sample</a>

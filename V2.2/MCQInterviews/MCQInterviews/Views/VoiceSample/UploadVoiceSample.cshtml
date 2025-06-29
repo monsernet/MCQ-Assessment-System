@@ -1,0 +1,25 @@
+﻿@model MCQInterviews.Models.ViewModels.VoiceSampleUploadViewModel
+
+@{
+    ViewData["Title"] = "Upload Voice Sample";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="container">
+    <form asp-action="UploadVoiceSample" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label asp-for="VoiceSample" class="control-label">Upload Voice Sample</label>
+            <input asp-for="VoiceSample" type="file" class="form-control" accept=".mp3,.wav,.ogg" />
+            <span asp-validation-for="VoiceSample" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

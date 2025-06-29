@@ -1,0 +1,328 @@
+﻿@model MCQInterviews.Models.ViewModels.AddQuestionRequest
+
+@{
+}
+
+<div class="container py-3">
+    @if (TempData["errorMsg"] != null)
+    {
+        <div class="alert alert-danger">
+            <i class ="fa fa-exclamation-triangle"></i>
+            @TempData["errorMsg"]
+        </div>
+    }
+
+    <div class="card mt-2">
+        <div class="card-header">
+            <h5 class="text-primary text-center">Add New Question</h5>
+        </div>
+
+        <div class="card-body">
+            <form method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+                <div class="row mb-3">
+                    <!-- Job Category Dropdown -->
+                    <div class="form-group col-md-4">
+                        @Html.LabelFor(m => m.ThemeId, "Job Category")
+                        @Html.DropDownListFor(m => m.ThemeId, (IEnumerable<SelectListItem>)ViewBag.Themes, "Select a Job Category", new { @class = "form-control", id="ThemesDropdown", @required = "required" })
+                        @Html.ValidationMessageFor(m => m.ThemeId)
+                    </div>
+
+                    <!-- Job Title Dropdown -->
+                    <div class="form-group col-md-4">
+                        @Html.LabelFor(m => m.JobTitleId, "Job Title")
+                        <select id="JobTitlesDropdown" name="JobTitleId" class="form-control" required>
+                            <option value="" selected disabled>Select a Job Title</option>
+                        </select>
+                        @Html.ValidationMessageFor(m => m.JobTitleId)
+                    </div>
+
+                    <!-- Difficulty Type Dropdown -->
+                    <div class="form-group col-md-4">
+                        @Html.LabelFor(m => m.DifficultyTypeId, "Difficulty Type")
+                        @Html.DropDownListFor(m => m.DifficultyTypeId, (IEnumerable<SelectListItem>)ViewBag.DiffTypes, "Select a Difficulty Type", new { @class = "form-control", @required = "required" })
+                        @Html.ValidationMessageFor(m => m.DifficultyTypeId)
+                    </div>
+
+                    <!-- Question Text -->
+                    <div class="form-group col-4 mt-3">
+                        @Html.LabelFor(m => m.Text, "Question")
+                        @Html.TextAreaFor(m => m.Text, new { @class = "form-control", @required = "required", rows = "4" })
+                        @Html.ValidationMessageFor(m => m.Text, null, new { @class = "text-danger" })
+                    </div>
+                    <!-- Question Type Dropdown -->
+                    <div class="form-group col-4 mt-3">
+                        @Html.LabelFor(m => m.QuestionTypeId, "Question Type")
+                        @Html.DropDownListFor(m => m.QuestionTypeId, (IEnumerable<SelectListItem>)ViewBag.QuestionTypes, "Select Question Type", new { @class = "form-control", id = "QuestionTypeDropdown", @required = "required" })
+                        @Html.ValidationMessageFor(m => m.QuestionTypeId)
+                    </div>
+                    <!-- Dynamic Sections Based on Question Type -->
+                    <div class="col-4 mt-3" id="mcqSection" style="display: none;">
+                        <h6>Multiple Choice Options</h6>
+                        <div id="mcqOptionsContainer">
+                            <div class="row mb-3">
+                                <div class="form-group col-md-10">
+                                    <input type="text" name="Options[0].Text" class="form-control" placeholder="Option 1" required />
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <button type="button" class="btn btn-success add-option">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 mt-3" id="photoSection" style="display: none;">
+                        @Html.LabelFor(m => m.PhotoUrl, "Upload Photo")
+                        <input type="file" name="PhotoUrl" class="form-control" accept="image/*" />
+                        @Html.ValidationMessageFor(m => m.PhotoUrl)
+                    </div>
+
+                    <div class="col-4 mt-3" id="videoSection" style="display: none;">
+                        @Html.LabelFor(m => m.VideoUrl, "Upload Video")
+                        <input type="file" name="VideoUrl" class="form-control" accept="video/*" />
+                        @Html.ValidationMessageFor(m => m.VideoUrl)
+                    </div>
+
+                    <div class="col-4 mt-3" id="audioSection" style="display: none;">
+                        @Html.LabelFor(m => m.AudioUrl, "Upload Audio")
+                        <input type="file" name="AudioUrl" class="form-control" accept="audio/*" />
+                        @Html.ValidationMessageFor(m => m.AudioUrl)
+                    </div>
+                </div>
+                <div class="row mt-2 mb-2">
+                    
+                    <!-- Response Type Dropdown (conditionally shown based on Question Type) -->
+                    <div class="form-group col-6 mt-3" id="responseTypeSection" style="display: none;">
+                        @Html.LabelFor(m => m.ResponseTypeId, "The candidate responds by")
+                        @Html.DropDownListFor(m => m.ResponseTypeId, (IEnumerable<SelectListItem>)ViewBag.ResponseTypes, "Select Response Type", new { @class = "form-control", id = "ResponseTypeDropdown", @required = "required" })
+                    </div>
+                    <div class="form-group col-6 mt-3" id="responseOptionsSection" style="display: none;">
+                        <div id="videoResponseOptions" style="display:none;">
+                            <label>Video Response Type</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="VideoResponseType" id="uploadedVideo" value="Uploaded Video" />
+                                <label class="form-check-label" for="uploadedVideo">Uploaded Video</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="VideoResponseType" id="liveVideo" value="Live Video" />
+                                <label class="form-check-label" for="liveVideo">Live Video</label>
+                            </div>
+                        </div>
+
+                        <div id="audioResponseOptions" style="display:none;">
+                            <label>Audio Response Type</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="AudioResponseType" id="uploadedAudio" value="Uploaded Audio" />
+                                <label class="form-check-label" for="uploadedAudio">Uploaded Audio</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="AudioResponseType" id="liveAudio" value="Live Audio" />
+                                <label class="form-check-label" for="liveAudio">Live Audio</label>
+                            </div>
+                        </div>
+
+                        <div id="mcqResponseOptions" style="display:none;">
+                            <h6>MCQ Options</h6>
+                            <div id="mcqResponseOptionsContainer">
+                                <div class="row mb-3">
+                                    <div class="form-group col-md-10">
+                                        <input type="text" name="ResponseOptions[0].Text" class="form-control" placeholder="Option 1" required />
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <button type="button" class="btn btn-success add-response-option">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+               
+
+                
+
+                <div class="form-group mt-3">
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save Question</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        var optionIndex = 0;
+        var responseOptionIndex = 0;
+
+        // Show/Hide sections based on selected question type
+        $('#QuestionTypeDropdown').change(function () {
+            var selectedType = $(this).val();
+            var selectedTypeText = ($("#QuestionTypeDropdown option:selected").text()).toLowerCase();
+            
+            $('#mcqSection, #mediaSection, #audioSection').hide(); // Hide all sections initially
+            $('#mcqOptionsContainer').empty(); // Clear existing options
+            $('#responseTypeSection').hide(); // Hide response type initially
+
+            if (selectedTypeText == 'mcq') { // MCQ Type
+                $('#mcqSection').show(); 
+                optionIndex = 0; 
+                addFirstOption();
+
+            } else if (selectedTypeText == 'text') {
+                
+                $('#photoSection').hide();
+                $('#videoSection').hide();
+                $('#audioSection').hide();
+                $('#responseTypeSection').show();
+
+            } else if (selectedTypeText == 'photo') { // Photo Type
+                $('#photoSection').show();
+                $('#videoSection').hide();
+                $('#audioSection').hide();
+                $('#responseTypeSection').show();
+
+            } else if (selectedTypeText == 'video') { // video Type
+                $('#videoSection').show();
+                $('#photoSection').hide();
+                $('#audioSection').hide();
+                $('#responseTypeSection').show();
+
+            } else if (selectedTypeText == 'audio') { // audio Type
+                $('#audioSection').show();
+                $('#photoSection').hide();
+                $('#videoSection').hide();
+                $('#responseTypeSection').show();
+            }
+        });
+
+        function addFirstOption() {
+            $('#mcqOptionsContainer').append(`
+                    <div class="row mb-3">
+                        <div class="form-group col-md-10">
+                            <input type="text" name="Options[${optionIndex}].Text" class="form-control" placeholder="Option ${optionIndex + 1}" required />
+                        </div>
+                        <div class="form-group col-md-2">
+                            <button type="button" class="btn btn-success add-option">+</button>
+                        </div>
+                    </div>
+                `);
+            optionIndex++; // Increment index after adding the first option
+        }
+
+        function addOption() {
+            $('#mcqOptionsContainer').append(`
+                    <div class="row mb-3">
+                        <div class="form-group col-md-10">
+                            <input type="text" name="Options[${optionIndex}].Text" class="form-control" placeholder="Option ${optionIndex + 1}" required />
+                        </div>
+                        <div class="form-group col-md-2">
+                            <button type="button" class="btn btn-danger remove-option">-</button>
+                        </div>
+                    </div>
+                `);
+            optionIndex++; // Increment index after adding
+        }
+
+        // Click event for adding new options
+        $('#mcqOptionsContainer').on('click', '.add-option', function () {
+            addOption(); // Call the function to add an option
+        });
+
+        // Remove MCQ option
+        $('#mcqOptionsContainer').on('click', '.remove-option', function () {
+            $(this).closest('.row').remove();
+            // Reindex remaining options if needed
+            reindexOptions();
+        });
+
+        function reindexOptions() {
+            var currentIndex = 0;
+            $('#mcqOptionsContainer .row').each(function () {
+                $(this).find('input').attr('name', `Options[${currentIndex}].Text`);
+                $(this).find('input').attr('placeholder', `Option ${currentIndex + 1}`);
+                currentIndex++;
+            });
+            optionIndex = currentIndex; // Update the global index
+        }
+
+        // Show/Hide sections based on selected response type
+        $('#ResponseTypeDropdown').change(function () {
+            var selectedResponseType = $(this).val();
+            var selectedResponseText = ($("#ResponseTypeDropdown option:selected").text()).toLowerCase();
+
+            $('#responseOptionsSection').hide(); // Hide all sections initially
+            $('#videoResponseOptions, #audioResponseOptions, #mcqResponseOptions').hide(); // Hide specific response sections
+
+            if (selectedResponseText === 'video') {
+                $('#responseOptionsSection').show();
+                $('#videoResponseOptions').show();
+            }
+            else if (selectedResponseText === 'audio') {
+                $('#responseOptionsSection').show();
+                $('#audioResponseOptions').show();
+            }
+            else if (selectedResponseText === 'mcq') {
+                $('#responseOptionsSection').show();
+                $('#mcqResponseOptions').show();
+
+                // Clear any existing options before adding the first one
+                $('#mcqResponseOptionsContainer').empty();
+                responseOptionIndex = 0; // Reset index to 0
+                addFirstResponseOption(); // Add the first MCQ option
+            }
+
+        });
+        // Function to dynamically add MCQ response options
+        var responseOptionIndex = 0;
+        function addFirstResponseOption() {
+            $('#mcqResponseOptionsContainer').append(`
+                <div class="row mb-3">
+                    <div class="form-group col-md-10">
+                        <input type="text" name="ResponseOptions[${responseOptionIndex}].Text" class="form-control" placeholder="Option ${responseOptionIndex + 1}" required />
+                    </div>
+                    <div class="form-group col-md-2">
+                        <button type="button" class="btn btn-success add-response-option">+</button>
+                    </div>
+                </div>
+            `);
+            responseOptionIndex++;
+        }
+
+        // Add new response option
+        $('#mcqResponseOptionsContainer').on('click', '.add-response-option', function () {
+            addResponseOption();
+        });
+
+        function addResponseOption() {
+            $('#mcqResponseOptionsContainer').append(`
+                <div class="row mb-3">
+                    <div class="form-group col-md-10">
+                        <input type="text" name="ResponseOptions[${responseOptionIndex}].Text" class="form-control" placeholder="Option ${responseOptionIndex + 1}" required />
+                    </div>
+                    <div class="form-group col-md-2">
+                        <button type="button" class="btn btn-danger remove-response-option">-</button>
+                    </div>
+                </div>
+            `);
+            responseOptionIndex++;
+        }
+
+        // Remove response MCQ option
+        $('#mcqResponseOptionsContainer').on('click', '.remove-response-option', function () {
+            $(this).closest('.row').remove();
+            reindexResponseOptions();
+        });
+
+        // Reindex the remaining options after deletion
+        function reindexResponseOptions() {
+            var currentIndex = 0;
+            $('#mcqResponseOptionsContainer .row').each(function () {
+                $(this).find('input').attr('name', `ResponseOptions[${currentIndex}].Text`);
+                $(this).find('input').attr('placeholder', `Option ${currentIndex + 1}`);
+                currentIndex++;
+            });
+            responseOptionIndex = currentIndex;
+        }
+    </script>
+
+}

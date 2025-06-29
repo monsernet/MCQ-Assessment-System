@@ -1,0 +1,28 @@
+﻿@model MCQInterviews.Models.ViewModels.AddJobLevelRequest
+@{
+}
+
+<div class="container py-5">
+    <div class="card mt-2">
+        <div class="card-header">
+            <h5 class="text-primary text-primary text-center">Add New Job Level</h5>
+        </div>
+        <div class="card-body">
+            <form method="post">
+                <div class="mb-3">
+                    <label class="form-label">Job Level description</label>
+                    <input type="text" class="form-control" id="name" asp-for="Name" required />
+                </div>
+
+
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                        <div class="mb-3 d-flex justify-content-center">
+                            <button class="btn btn-primary col-8" type="submit"><i class="fa fa-save"></i> Save Job Level</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

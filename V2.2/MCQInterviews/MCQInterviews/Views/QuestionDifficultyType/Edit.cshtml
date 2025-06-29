@@ -1,0 +1,43 @@
+﻿@model MCQInterviews.Models.ViewModels.EditQuestionDifficultyTypeRequest
+@{
+}
+
+<div class="container py-3">
+    @if (TempData["errorMsg"] != null)
+    {
+        <div class="alert alert-danger">
+            <i class="fas fa-exclamation-triangle"></i> 
+            @TempData["errorMsg"]
+        </div>
+    }
+    <div class="card mt-2">
+        <div class="card-header">
+            <h5 class="text-primary text-primary text-center">Edit Question Difficulty Type</h5>
+        </div>
+        <div class="card-body">
+            <form method="post">
+                <div class="mb-3">
+                    
+                    <input type="hidden" id="id" class="form-control" asp-for="Id" readonly />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Question Difficulty Type Name</label>
+                    <input type="text" id="name" class="form-control" asp-for="TypeText" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Number of Points</label>
+                    <input type="number" min="1" step="1" class="form-control" id="pointValue" asp-for="PointValue" />
+                </div>
+
+                <div class="mb-3">
+                    <div class="d-flex">
+                        <button type="submit" class="btn btn-primary col-6"><i class="fas fa-sync-alt"></i> Save Changes</button>
+
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
