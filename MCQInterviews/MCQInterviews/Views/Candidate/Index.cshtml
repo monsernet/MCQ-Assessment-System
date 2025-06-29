@@ -1,0 +1,45 @@
+﻿
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container">
+    <h2 class="text-center my-4">Welcome to the Candidate Dashboard</h2>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card card-candidate text-center  custom-card">
+                <div class="card-body">
+                    <h5 class="card-title card-candidate-title">Getting to Know You</h5>
+                    <p class="card-text ">Tell us more about yourself with some introductory questions.</p>
+                    <a href="@Url.Action("Index", "GettingToKnowYou")" class="btn btn-primary">Start Getting to Know You</a>
+                </div>
+            </div>
+        </div>
+       
+        <div class="col-md-6">
+            <div class="card card-candidate text-center  custom-card">
+                <div class="card-body">
+                    <h5 class="card-title card-candidate-title">Interview Invitations</h5>
+                    <p class="card-text">Check your upcoming interviews and respond to invitations.<br/>
+                    <span class="card-muted">You have <span class="badge bg-primary">0</span> invitation(s) awaiting your response.</span>
+                    </p>
+                    <a href="@Url.Action("Index", "InterviewInvitations")" class="btn btn-primary ">Check Interview Invitations</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card card-candidate text-center  custom-card">
+                <div class="card-body">
+                    <h5 class="card-title card-candidate-title">Test Your Skills</h5>
+                    <p class="card-text">Start your multiple-choice question assessments here.</p>
+                    <a href="@Url.Action("Index", "Home")" class="btn btn-primary card-link">Go to MCQ Assessments</a>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+</div>
+

@@ -1,0 +1,65 @@
+﻿@model MCQInterviews.Models.Domain.Question
+@using MCQInterviews.Models.ViewModels
+@using Newtonsoft.Json
+
+@{
+    var allocations = ViewBag.Allocations as List<DifficultyAllocationViewModel>;
+}
+
+<div class="container py-3">
+    @if (TempData["errorMsg"] != null)
+    {
+        <div class="alert alert-danger">
+            <i class="fa fa-exclamation-triangle"></i>
+            @TempData["errorMsg"]
+        </div>
+    }
+    <div class="card mt-2">
+        <div class="card-header">
+            <h5 class="text-primary text-primary text-center">Add New Question</h5>
+        </div>
+        <div class="card-body">
+            <form asp-controller="Question" asp-action="AddMcqQuestion" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+                <div class="row mb-3">
+                    <div class="form-group col-4">
+                        @Html.Label("MCQ", "MCQ")
+                        @Html.TextBox("MCQ Name", (string)ViewBag.mcqName, new {  @class = "form-control", @type = "text", @readonly = "readonly" })
+                    </div>
+                    <div class="form-group col-4">
+                        @Html.Label("Job Title", "Job Title")
+                        @Html.TextBox("Job Title", (string)ViewBag.JobTitleName, new {  @class = "form-control", @type = "text", @readonly = "readonly" })
+                    </div>
+            
+
+                    <input type="hidden" name="mcqId" value="@ViewBag.McqId" />
+                    <input type="hidden" name="jobTitleId" value="@ViewBag.JobTitleId" />
+                    <input type="hidden" name="jobLevelId" value="@ViewBag.JobLevelId" />
+            
+
+
+
+                </div>
+                <div class="row mb-3">
+                    <div class="form-group col-3">
+                        @Html.Label("Difficulty Type", "Difficulty Type")
+                        @Html.DropDownList("QuestionDifficultyTypeId", (IEnumerable<SelectListItem>)ViewBag.difficultyList, "Select a Difficulty Type", new { @class = "form-control" , @required ="required" })
+                    </div>
+                    <div class="form-group col-9">
+                        @Html.LabelFor(m => m.Text, "Question")
+                        <textarea class="form-control" name="Text" rows="3"></textarea>
+                        <span asp-validation-for="Text" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <input type="hidden" name="mcqDiffTypeId" value="@ViewBag.McqDiffTypeId" />
+                <input type="hidden" name="allocationData" value="@JsonConvert.SerializeObject(allocations)" />
+
+                <div class="form-group mt-3">
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save New Question</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

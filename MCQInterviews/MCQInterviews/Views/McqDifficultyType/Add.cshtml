@@ -1,0 +1,22 @@
+﻿@model MCQInterviews.Models.ViewModels.AddMcqDifficultyTypeRequest
+@{
+}
+
+<div class="container py-5">
+    <div class="card mt-2">
+        <div class="card-header">
+            <h5 class="text-primary text-primary text-center">Add New MCQ Difficulty Type</h5>
+        </div>
+        <div class="card-body">
+            <form method="post">
+                <div class="mb-3">
+                    <label class="form-label">MCQ Difficulty Type Name</label>
+                    <input type="text" class="form-control" id="name" asp-for="TypeText" />
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-primary " type="submit"><i class="fa fa-save"></i> Save New MCQ Difficulty Type</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

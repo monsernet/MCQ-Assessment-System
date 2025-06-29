@@ -1,0 +1,75 @@
+﻿@model MCQInterviews.Models.ViewModels.AddMcqRequest
+@{
+}
+
+<div class="container py-5">
+    <div class="card mt-2">
+        <div class="card-header">
+            <h5 class="text-primary text-primary text-center">Add New MCQ</h5>
+        </div>
+        <div class="card-body">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+        
+                <div class="row mb-3">
+                    <div class="form-group col-6">
+                        @Html.LabelFor(m => m.Name, "MCQ Name")
+                        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" , @required ="required" })
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-6">
+                        @Html.LabelFor(m => m.Description, "MCQ Description")
+                        @Html.TextAreaFor(m => m.Description, new { @class = "form-control", @required = "required", rows = "2" })
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="form-group col-3">
+                        @Html.LabelFor(m => m.ThemeId, "Job Category")
+                        @Html.DropDownListFor(m => m.ThemeId, (IEnumerable<SelectListItem>)ViewBag.Themes, "Select a Job Category", new { @class = "form-control", id="ThemesDropdown" , @required ="required" })
+                        @Html.ValidationMessageFor(m => m.ThemeId)
+                    </div>
+                    <div class="form-group col-3">
+                        @Html.LabelFor(m => m.JobTitleId, "Job Title")
+                        <select id="JobTitlesDropdown" name="JobTitleId" class="form-control" required>
+                            <option value="" selected disabled>Select a Job Title</option>
+                        </select>
+                        @Html.ValidationMessageFor(m => m.JobTitleId)
+                    </div>
+                    <div class="form-group col-3">
+                        @Html.LabelFor(m => m.JobLevelId, "Job Level")
+                        @Html.DropDownListFor(m => m.JobLevelId, (IEnumerable<SelectListItem>)ViewBag.JobLevels, "Select a Job Level", new { @class = "form-control" , @required ="required" })
+                        @Html.ValidationMessageFor(m => m.JobLevelId)
+                    </div>
+                     <div class="form-group col-3">
+                        @Html.LabelFor(m => m.DifficultyTypeId, "Difficulty Type")
+                        @Html.DropDownListFor(m => m.DifficultyTypeId, (IEnumerable<SelectListItem>)ViewBag.DiffTypes, "Select a Difficulty Type", new { @class = "form-control" , @required ="required" })
+                        @Html.ValidationMessageFor(m => m.DifficultyTypeId)
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="form-group col-4">
+                        @Html.LabelFor(m => m.MCQType, "MCQ Type")
+                        @Html.DropDownListFor(m => m.MCQType, (IEnumerable<SelectListItem>)ViewBag.MCQTypes, "Select an MCQ Type", new { @class = "form-control" , @required ="required" })
+                        @Html.ValidationMessageFor(m => m.MCQType)
+                        <span asp-validation-for="MCQType" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-4">
+                        @Html.LabelFor(m => m.Duration, "Duration (minutes)")
+                        @Html.TextBoxFor(m => m.Duration, new { @class = "form-control" , @type="number", @required ="required" })
+                        <span asp-validation-for="Duration" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-4">
+                        @Html.LabelFor(m => m.NbQuestions, "Number of Questions")
+                        @Html.TextBoxFor(m => m.NbQuestions, new { @class = "form-control", @type="number" , @required ="required" })
+                        <span asp-validation-for="NbQuestions" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group mt-3">
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save MCQ</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,53 @@
+﻿@model MCQInterviews.Models.Domain.Question
+@{
+}
+
+<div class="container py-2">
+    @if (TempData["errorMsg"] != null)
+    {
+        <div class="alert alert-danger">
+            <i class="fa fa-exclamation-triangle"></i>
+            @TempData["errorMsg"]
+        </div>
+    }
+    <div class="card mt-2">
+        <div class="card-header">
+            <h5 class="text-primary text-primary text-center"> Add New Question</h5>
+        </div>
+        <div class="card-body">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+                <div class="row mb-3">
+                    <div class="form-group col-4">
+                        @Html.Label("Category", "Category")
+                        @Html.TextBox("Category", (string)ViewBag.ThemeName, new {  @class = "form-control", @type = "text", @readonly = "readonly" })
+                    </div>
+                    <div class="form-group col-4">
+                        @Html.Label("Job Title", "Job Title")
+                        @Html.TextBox("Job Title", (string)ViewBag.JobTitleName, new {  @class = "form-control", @type = "text", @readonly = "readonly" })
+                    </div>
+                    <div class="form-group col-4">
+                        @Html.Label("Job Level", "Job Level")
+                        @Html.TextBox("Job Level", (string)ViewBag.JobLevelName, new {  @class = "form-control", @type = "text", @readonly = "readonly" })
+                    </div>
+
+                    <div class="form-group col-4">
+                        @Html.TextBoxFor(m => m.JobTitleId, new { @class = "form-control", @type = "hidden" })
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="form-group col-12">
+                        @Html.LabelFor(m => m.Text, "Question")
+                        <textarea class="form-control" name="Text" rows="3">@Html.Raw(Model.Text)</textarea>
+                        <span asp-validation-for="Text" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group mt-3">
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save New Question</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
