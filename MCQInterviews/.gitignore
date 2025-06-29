@@ -34,7 +34,8 @@ ScaffoldingReadMe.txt
 # Secrets and config
 secrets.json
 appsettings.*.json
-!appsettings.json
+appsettings.json
+appsettings.development.json
 
 # Publish
 wwwroot/dist/
