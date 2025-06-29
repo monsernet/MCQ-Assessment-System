@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MCQInterviews")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b7e6a83ac549ec2796db6c2ee2e4e3f7e951f250")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee9155a80ee95ed7f6405a8bc776fc0699395267")]
 [assembly: System.Reflection.AssemblyProductAttribute("MCQInterviews")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MCQInterviews")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

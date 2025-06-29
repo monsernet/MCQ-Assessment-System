@@ -1,45 +1,45 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\MCQInterviews\\V2.2\\MCQInterviews\\",
+  "WorkspaceRootPath": "F:\\MCQInterviews\\MCQInterviews\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|f:\\mcqinterviews\\v2.2\\mcqinterviews\\mcqinterviews\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|f:\\mcqinterviews\\mcqinterviews\\mcqinterviews\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|solutionrelative:mcqinterviews\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|f:\\mcqinterviews\\v2.2\\mcqinterviews\\mcqinterviews\\controllers\\questioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|f:\\mcqinterviews\\mcqinterviews\\mcqinterviews\\controllers\\questioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|solutionrelative:mcqinterviews\\controllers\\questioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|f:\\mcqinterviews\\v2.2\\mcqinterviews\\mcqinterviews\\views\\question\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|f:\\mcqinterviews\\mcqinterviews\\mcqinterviews\\views\\question\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|solutionrelative:mcqinterviews\\views\\question\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|f:\\mcqinterviews\\v2.2\\mcqinterviews\\mcqinterviews\\models\\domain\\questionoption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|f:\\mcqinterviews\\mcqinterviews\\mcqinterviews\\models\\domain\\questionoption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|solutionrelative:mcqinterviews\\models\\domain\\questionoption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|f:\\mcqinterviews\\v2.2\\mcqinterviews\\mcqinterviews\\models\\domain\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|f:\\mcqinterviews\\mcqinterviews\\mcqinterviews\\models\\domain\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|solutionrelative:mcqinterviews\\models\\domain\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|f:\\mcqinterviews\\v2.2\\mcqinterviews\\mcqinterviews\\models\\viewmodels\\addquestionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|f:\\mcqinterviews\\mcqinterviews\\mcqinterviews\\models\\viewmodels\\addquestionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|solutionrelative:mcqinterviews\\models\\viewmodels\\addquestionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|f:\\mcqinterviews\\v2.2\\mcqinterviews\\mcqinterviews\\models\\domain\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|f:\\mcqinterviews\\mcqinterviews\\mcqinterviews\\models\\domain\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|solutionrelative:mcqinterviews\\models\\domain\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|f:\\mcqinterviews\\v2.2\\mcqinterviews\\mcqinterviews\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|f:\\mcqinterviews\\mcqinterviews\\mcqinterviews\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|solutionrelative:mcqinterviews\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|f:\\mcqinterviews\\v2.2\\mcqinterviews\\mcqinterviews\\repositories\\questiontypes\\questiontyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|f:\\mcqinterviews\\mcqinterviews\\mcqinterviews\\repositories\\questiontypes\\questiontyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|solutionrelative:mcqinterviews\\repositories\\questiontypes\\questiontyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|f:\\mcqinterviews\\v2.2\\mcqinterviews\\mcqinterviews\\migrations\\20241004074401_updatequestionentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|f:\\mcqinterviews\\mcqinterviews\\mcqinterviews\\migrations\\20241004074401_updatequestionentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D25DD3CC-F2F3-43BD-B012-63A41681DC62}|MCQInterviews\\MCQInterviews.csproj|solutionrelative:mcqinterviews\\migrations\\20241004074401_updatequestionentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -50,12 +50,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
@@ -64,9 +60,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "appsettings.json",
-              "DocumentMoniker": "F:\\MCQInterviews\\V2.2\\MCQInterviews\\MCQInterviews\\appsettings.json",
+              "DocumentMoniker": "F:\\MCQInterviews\\MCQInterviews\\MCQInterviews\\appsettings.json",
               "RelativeDocumentMoniker": "MCQInterviews\\appsettings.json",
-              "ToolTip": "F:\\MCQInterviews\\V2.2\\MCQInterviews\\MCQInterviews\\appsettings.json",
+              "ToolTip": "F:\\MCQInterviews\\MCQInterviews\\MCQInterviews\\appsettings.json",
               "RelativeToolTip": "MCQInterviews\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -77,9 +73,9 @@
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "20241004074401_UpdateQuestionEntity.cs",
-              "DocumentMoniker": "F:\\MCQInterviews\\V2.2\\MCQInterviews\\MCQInterviews\\Migrations\\20241004074401_UpdateQuestionEntity.cs",
+              "DocumentMoniker": "F:\\MCQInterviews\\MCQInterviews\\MCQInterviews\\Migrations\\20241004074401_UpdateQuestionEntity.cs",
               "RelativeDocumentMoniker": "MCQInterviews\\Migrations\\20241004074401_UpdateQuestionEntity.cs",
-              "ToolTip": "F:\\MCQInterviews\\V2.2\\MCQInterviews\\MCQInterviews\\Migrations\\20241004074401_UpdateQuestionEntity.cs",
+              "ToolTip": "F:\\MCQInterviews\\MCQInterviews\\MCQInterviews\\Migrations\\20241004074401_UpdateQuestionEntity.cs",
               "RelativeToolTip": "MCQInterviews\\Migrations\\20241004074401_UpdateQuestionEntity.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -89,9 +85,9 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "AddQuestionRequest.cs",
-              "DocumentMoniker": "F:\\MCQInterviews\\V2.2\\MCQInterviews\\MCQInterviews\\Models\\ViewModels\\AddQuestionRequest.cs",
+              "DocumentMoniker": "F:\\MCQInterviews\\MCQInterviews\\MCQInterviews\\Models\\ViewModels\\AddQuestionRequest.cs",
               "RelativeDocumentMoniker": "MCQInterviews\\Models\\ViewModels\\AddQuestionRequest.cs",
-              "ToolTip": "F:\\MCQInterviews\\V2.2\\MCQInterviews\\MCQInterviews\\Models\\ViewModels\\AddQuestionRequest.cs",
+              "ToolTip": "F:\\MCQInterviews\\MCQInterviews\\MCQInterviews\\Models\\ViewModels\\AddQuestionRequest.cs",
               "RelativeToolTip": "MCQInterviews\\Models\\ViewModels\\AddQuestionRequest.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAgwBQAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -101,9 +97,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Add.cshtml",
-              "DocumentMoniker": "F:\\MCQInterviews\\V2.2\\MCQInterviews\\MCQInterviews\\Views\\Question\\Add.cshtml",
+              "DocumentMoniker": "F:\\MCQInterviews\\MCQInterviews\\MCQInterviews\\Views\\Question\\Add.cshtml",
               "RelativeDocumentMoniker": "MCQInterviews\\Views\\Question\\Add.cshtml",
-              "ToolTip": "F:\\MCQInterviews\\V2.2\\MCQInterviews\\MCQInterviews\\Views\\Question\\Add.cshtml",
+              "ToolTip": "F:\\MCQInterviews\\MCQInterviews\\MCQInterviews\\Views\\Question\\Add.cshtml",
               "RelativeToolTip": "MCQInterviews\\Views\\Question\\Add.cshtml",
               "ViewState": "AQIAAA0AAAAAAAAAAAAmwBIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -113,9 +109,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Question.cs",
-              "DocumentMoniker": "F:\\MCQInterviews\\V2.2\\MCQInterviews\\MCQInterviews\\Models\\Domain\\Question.cs",
+              "DocumentMoniker": "F:\\MCQInterviews\\MCQInterviews\\MCQInterviews\\Models\\Domain\\Question.cs",
               "RelativeDocumentMoniker": "MCQInterviews\\Models\\Domain\\Question.cs",
-              "ToolTip": "F:\\MCQInterviews\\V2.2\\MCQInterviews\\MCQInterviews\\Models\\Domain\\Question.cs",
+              "ToolTip": "F:\\MCQInterviews\\MCQInterviews\\MCQInterviews\\Models\\Domain\\Question.cs",
               "RelativeToolTip": "MCQInterviews\\Models\\Domain\\Question.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAA9wBkAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -125,9 +121,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "QuestionController.cs",
-              "DocumentMoniker": "F:\\MCQInterviews\\V2.2\\MCQInterviews\\MCQInterviews\\Controllers\\QuestionController.cs",
+              "DocumentMoniker": "F:\\MCQInterviews\\MCQInterviews\\MCQInterviews\\Controllers\\QuestionController.cs",
               "RelativeDocumentMoniker": "MCQInterviews\\Controllers\\QuestionController.cs",
-              "ToolTip": "F:\\MCQInterviews\\V2.2\\MCQInterviews\\MCQInterviews\\Controllers\\QuestionController.cs",
+              "ToolTip": "F:\\MCQInterviews\\MCQInterviews\\MCQInterviews\\Controllers\\QuestionController.cs",
               "RelativeToolTip": "MCQInterviews\\Controllers\\QuestionController.cs",
               "ViewState": "AgIAAKQAAAAAAAAAAAAcwPkAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -137,9 +133,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "QuestionOption.cs",
-              "DocumentMoniker": "F:\\MCQInterviews\\V2.2\\MCQInterviews\\MCQInterviews\\Models\\Domain\\QuestionOption.cs",
+              "DocumentMoniker": "F:\\MCQInterviews\\MCQInterviews\\MCQInterviews\\Models\\Domain\\QuestionOption.cs",
               "RelativeDocumentMoniker": "MCQInterviews\\Models\\Domain\\QuestionOption.cs",
-              "ToolTip": "F:\\MCQInterviews\\V2.2\\MCQInterviews\\MCQInterviews\\Models\\Domain\\QuestionOption.cs",
+              "ToolTip": "F:\\MCQInterviews\\MCQInterviews\\MCQInterviews\\Models\\Domain\\QuestionOption.cs",
               "RelativeToolTip": "MCQInterviews\\Models\\Domain\\QuestionOption.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -149,9 +145,9 @@
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "Response.cs",
-              "DocumentMoniker": "F:\\MCQInterviews\\V2.2\\MCQInterviews\\MCQInterviews\\Models\\Domain\\Response.cs",
+              "DocumentMoniker": "F:\\MCQInterviews\\MCQInterviews\\MCQInterviews\\Models\\Domain\\Response.cs",
               "RelativeDocumentMoniker": "MCQInterviews\\Models\\Domain\\Response.cs",
-              "ToolTip": "F:\\MCQInterviews\\V2.2\\MCQInterviews\\MCQInterviews\\Models\\Domain\\Response.cs",
+              "ToolTip": "F:\\MCQInterviews\\MCQInterviews\\MCQInterviews\\Models\\Domain\\Response.cs",
               "RelativeToolTip": "MCQInterviews\\Models\\Domain\\Response.cs",
               "ViewState": "AQIAAAcAAAAAAAAAAAAwwBUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -161,9 +157,9 @@
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "QuestionTypeRepository.cs",
-              "DocumentMoniker": "F:\\MCQInterviews\\V2.2\\MCQInterviews\\MCQInterviews\\Repositories\\QuestionTypes\\QuestionTypeRepository.cs",
+              "DocumentMoniker": "F:\\MCQInterviews\\MCQInterviews\\MCQInterviews\\Repositories\\QuestionTypes\\QuestionTypeRepository.cs",
               "RelativeDocumentMoniker": "MCQInterviews\\Repositories\\QuestionTypes\\QuestionTypeRepository.cs",
-              "ToolTip": "F:\\MCQInterviews\\V2.2\\MCQInterviews\\MCQInterviews\\Repositories\\QuestionTypes\\QuestionTypeRepository.cs",
+              "ToolTip": "F:\\MCQInterviews\\MCQInterviews\\MCQInterviews\\Repositories\\QuestionTypes\\QuestionTypeRepository.cs",
               "RelativeToolTip": "MCQInterviews\\Repositories\\QuestionTypes\\QuestionTypeRepository.cs",
               "ViewState": "AQIAABQAAAAAAAAAAAA3wAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -173,9 +169,9 @@
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "Program.cs",
-              "DocumentMoniker": "F:\\MCQInterviews\\V2.2\\MCQInterviews\\MCQInterviews\\Program.cs",
+              "DocumentMoniker": "F:\\MCQInterviews\\MCQInterviews\\MCQInterviews\\Program.cs",
               "RelativeDocumentMoniker": "MCQInterviews\\Program.cs",
-              "ToolTip": "F:\\MCQInterviews\\V2.2\\MCQInterviews\\MCQInterviews\\Program.cs",
+              "ToolTip": "F:\\MCQInterviews\\MCQInterviews\\MCQInterviews\\Program.cs",
               "RelativeToolTip": "MCQInterviews\\Program.cs",
               "ViewState": "AQIAACcAAAAAAAAAAAAAADYAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
